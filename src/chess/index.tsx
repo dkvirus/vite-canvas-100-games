@@ -661,10 +661,10 @@ const ChineseChess: React.FC = () => {
     const move = engine.getBestMove(board, PieceColor.BLACK, difficultyConfig);
     
     if (move) {
-      const { newBoard } = engine.makeMove(board, move.from, move.to);
+      const { newBoard, captured } = engine.makeMove(board, move.from, move.to);
       // 验证AI走法不导致自己被将军
       if (!engine.isInCheck(newBoard, PieceColor.BLACK)) {
-        moveHistoryRef.current.push(move);
+        moveHistoryRef.current.push({ ...move, captured });
         setBoard(newBoard);
         
         if (engine.isCheckmate(newBoard, PieceColor.RED)) {
