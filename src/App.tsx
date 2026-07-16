@@ -1,24 +1,22 @@
-import { Link, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import ChessPage from './chess'
-
-function HomePage() {
-  return <div>欢迎来到首页</div>
-}
+import Home from './home'
+import Gomoku from './gomoku'
+import ChineseChess from './chineseChess'
 
 function App() {
   return (
-    <div>
-      <nav style={{ marginBottom: 16 }}>
+    <div className="bg-white rounded-2xl w-fit h-full mx-auto p-4">
+      {/* <nav style={{ marginBottom: 16 }}>
         <Link to="/" style={{ marginRight: 12 }}>
-          Home
+          首页
         </Link>
-        <Link to="/chess">ChessPage</Link>
-      </nav>
+      </nav> */}
 
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/chess" element={<ChessPage />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/gomoku" element={<Gomoku />} />
+        <Route path="/chinese-chess" element={<ChineseChess />} />
       </Routes>
     </div>
   )
