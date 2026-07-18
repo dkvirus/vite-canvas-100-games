@@ -1178,7 +1178,7 @@ const ChineseChess: React.FC = () => {
     }, [resetGame]);
 
     return (
-        <div className="rounded-2xl max-w-[960px] w-full">
+        <div className="rounded-2xl max-w-[960px] w-full mx-auto p-4">
             <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
                 <h1 className="text-2xl m-0 text-[#333]">♟ 中国象棋</h1>
                 <div className="flex flex-wrap items-center justify-center gap-2 max-[640px]:grid max-[640px]:grid-cols-2 max-[640px]:w-full">

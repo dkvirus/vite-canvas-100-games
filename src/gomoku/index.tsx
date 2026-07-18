@@ -345,7 +345,7 @@ const Gomoku: React.FC = () => {
                 : '轮到你落子（黑方）'
 
     return (
-        <div className="rounded-2xl max-w-[960px] w-full">
+        <div className="rounded-2xl max-w-[960px] w-full mx-auto p-4">
             <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
                 <h1 className="text-2xl m-0 text-[#333]">⚫⚪ 五子棋</h1>
                 <div className="flex flex-wrap items-center justify-center gap-2">
